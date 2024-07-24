@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':phone', $phone);
 
     if ($stmt->execute()) {
-        header("Location: ../public/login.php?success=Registration successful. Please log in.");
+        header("Location: ../public/succ.php?success=Registration successful. Please log in.");
     } else {
         header("Location: ../public/register.php?error=Registration failed. Please try again.");
     }
