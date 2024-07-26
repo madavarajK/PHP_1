@@ -15,9 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = trim($_POST['password']);
     $confirm_password = trim($_POST['confirm_password']);
     $phone = trim($_POST['phone']);
+    $email = trim($_POST['email']);
     
     // Validate inputs
-    if (empty($username) || empty($password) || empty($confirm_password) || empty($phone)) {
+    if (empty($username) || empty($password) || empty($confirm_password) || empty($phone) || empty($email)) {
         header("Location: ../public/register.php?error=Please fill in all fields.");
         exit;
     }
@@ -50,12 +51,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insert new user
-    $passwordHash = password_hash($password, PASSWORD_BCRYPT);
-    $sql = "INSERT INTO users (username, password, phone) VALUES (:username, :password, :phone)";
+    // $passwordHash = password_hash($password, PASSWORD_BCRYPT);
+    $sql = "INSERT INTO users (username, password, phone, email) VALUES (:username, :password, :phone, :email)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':username', $username);
-    $stmt->bindParam(':password', $passwordHash);
+    $stmt->bindParam(':password', $password);
     $stmt->bindParam(':phone', $phone);
+    $stmt->bindParam(':email', $email);
 
     if ($stmt->execute()) {
         header("Location: ../public/succ.php?success=Registration successful. Please log in.");

@@ -1,77 +1,39 @@
 /* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
 }
 
-.container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
+.container1 {
+    width: 400px;
     background-color: #fff;
-    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    text-align: center;
 }
 
 h2 {
-    margin: 0 0 20px;
-    text-align: center;
-}
-
-label {
-    display: block;
-    margin: 0 0 10px;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    margin: 0 0 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #5cb85c;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #4cae4c;
-}
-
-a {
-    display: block;
-    text-align: center;
-    margin: 10px 0 0;
     color: #333;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-p {
-    text-align: center;
 }
 
 table {
-    width: 100%;
+    width: auto;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
 table, th, td {
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
 }
 
 th, td {
@@ -81,4 +43,47 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+}
+
+td {
+    word-break: break-word;
+}
+
+.logout-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #4cae4c;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 10px;
 }

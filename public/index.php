@@ -18,6 +18,7 @@ if (!isset($_SESSION['username'])) {
 <body>
     <div class="container">
         <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
+        <a href="change_password.php">Reset Password</a>
         <a href="logout.php">Logout</a>
     </div>
 </body>

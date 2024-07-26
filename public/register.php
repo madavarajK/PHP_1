@@ -19,6 +19,8 @@
             <input type="password" id="confirm_password" name="confirm_password" required>
             <label for="phone">Phone Number:</label>
             <input type="text" id="phone" name="phone" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
             <input type="submit" value="Register">
         </form>
         <a href="login.php">Already have an account? Login here</a>

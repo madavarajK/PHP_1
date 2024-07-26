@@ -17,6 +17,10 @@
             <input type="submit" value="Login">
         </form>
         <a href="register.php">Don't have an account? Register here</a>
+        <br/>
+        <a href="admin_login.php">Admin Login Click Here</a>
+        <br/>
+        <a href="reset_password.php">Forgot Password? Click Here</a>
     </div>
 </body>
 </html>
